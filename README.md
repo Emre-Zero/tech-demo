@@ -1,4 +1,4 @@
-### Live version: https://em-stripe-demo.herokuapp.com
+### [Live demo site](https://em-stripe-demo.herokuapp.com)
 
 ### Test info
 - Billing address: `random`
