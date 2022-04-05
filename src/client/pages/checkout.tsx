@@ -24,6 +24,8 @@ import * as Yup from 'yup';
 
 const DynamicReactJson = dynamic(import('react-json-view'), { ssr: false });
 
+console.warn('do2', process.env.NEXT_PUBLIC_STRIPE_KEY);
+
 const useData = () => {
   const [paymentInfo, updatePaymentInfo] = useReducer(
     (prevState, updates) => ({ ...prevState, ...updates }),
