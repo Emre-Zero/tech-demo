@@ -5,6 +5,8 @@ services:
     build:
       context: .
       dockerfile: ${DOCKER_FILE:-Dockerfile}
+    env_file:
+      - .env
     command: yarn start:dev
     ports:
       - "3000:3000"
