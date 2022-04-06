@@ -1,6 +1,11 @@
-### [Live demo site](https://em-stripe-demo.herokuapp.com)
+## Live demo site: [stripe.emre.earth](https://stripe.emre.earth)
 
+---
+
+#### Preview:
 <img src="https://user-images.githubusercontent.com/3676208/160706490-9a0b2f77-6f28-4203-912c-5098d39272d5.png" width="100" height="100">
+
+---
 
 ### Test info
 - Billing address: `random`
