@@ -10,6 +10,12 @@ RUN yarn install --immutable --immutable-cache --check-cache
 
 COPY . /app
 
+ARG NEXT_PUBLIC_STRIPE_KEY
+ENV NEXT_PUBLIC_STRIPE_KEY=${NEXT_PUBLIC_STRIPE_KEY}
+
+ARG STRIPE_SECRET_KEY
+ENV STRIPE_SECRET_KEY=${STRIPE_SECRET_KEY}
+
 RUN yarn build
 
 CMD yarn start:prod
