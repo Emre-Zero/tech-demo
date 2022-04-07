@@ -5,7 +5,7 @@ import { NextServer } from 'next/dist/server/next';
 
 @Injectable()
 export default class ViewService implements OnModuleInit {
-  private server: NextServer;
+  private server: NextServer | undefined;
 
   constructor(private configService: ConfigService) {}
 
@@ -23,6 +23,6 @@ export default class ViewService implements OnModuleInit {
   }
 
   getNextServer(): NextServer {
-    return this.server;
+    return <NextServer>this.server;
   }
 }

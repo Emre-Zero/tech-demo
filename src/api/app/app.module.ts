@@ -4,7 +4,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 
 import AppController from '@app/app.controller';
 import AppService from '@app/app.service';
-import { StripeModule } from '@golevelup/nestjs-stripe';
+import { StripeModule, StripeModuleConfig } from '@golevelup/nestjs-stripe';
 import StripeService from '@app/payments/stripe.service';
 
 @Module({
@@ -13,9 +13,11 @@ import StripeService from '@app/payments/stripe.service';
       isGlobal: true,
     }),
     StripeModule.forRootAsync(StripeModule, {
-      useFactory: async (configService: ConfigService) => ({
-        apiKey: configService.get<string>('STRIPE_SECRET_KEY'),
-      }),
+      useFactory: async (configService: ConfigService): Promise<StripeModuleConfig> => {
+          return {
+            apiKey: <string>configService.get('STRIPE_SECRET_KEY'),
+          }
+      },
       inject: [ConfigService],
     }),
     ConsoleModule,

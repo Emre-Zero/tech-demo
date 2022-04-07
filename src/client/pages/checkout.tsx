@@ -1,4 +1,4 @@
-import React, { useMemo, useReducer, useState } from 'react';
+import React, {FormEventHandler, useMemo, useReducer, useState} from 'react';
 import { NextPage } from 'next';
 import dynamic from 'next/dynamic';
 import { CardElement, Elements, useStripe, useElements } from '@stripe/react-stripe-js';
@@ -17,18 +17,17 @@ import {
 } from '@nextui-org/react';
 import { useBetween } from 'use-between';
 import axios from 'axios';
-import getStripe from '@client/app/utils/stripe';
+import getStripe from '@client/utils/stripe';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
+import {StripeCardElement} from "@stripe/stripe-js";
 
 const DynamicReactJson = dynamic(import('react-json-view'), { ssr: false });
 
-console.warn('do2', process.env.NEXT_PUBLIC_STRIPE_KEY);
-
 const useData = () => {
   const [paymentInfo, updatePaymentInfo] = useReducer(
-    (prevState, updates) => ({ ...prevState, ...updates }),
+    (prevState: any, updates: any) => ({ ...prevState, ...updates }),
     {
       plan: 'A',
       status: 'billing-info',
@@ -116,11 +115,11 @@ const InitialForm = () => {
   const { register, handleSubmit, formState } = useForm(formOptions);
   const { errors } = formState;
 
-  const handlePlanChange = (value) => {
+  const handlePlanChange = (value: any) => {
     updatePaymentInfo({ plan: value });
   };
 
-  const onSubmit = async (formData) => {
+  const onSubmit = async (formData: any) => {
     await updatePaymentInfo({ ...formData });
     const { plan, discountCode, state } = paymentInfo;
     setLoading(true);
@@ -278,11 +277,11 @@ const StripeForm = () => {
   const [isLoading, setLoading] = useState(false);
   const { paymentInfo, updatePaymentInfo } = useSharedState();
 
-  const setMessage = (message) => {
+  const setMessage = (message: string) => {
     _setMessages(`${message}`);
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     if (!stripe || !elements) {
       // Wait for Stripe to load
@@ -291,7 +290,7 @@ const StripeForm = () => {
 
     setMessage('');
     setLoading(true);
-    const cardElement = elements.getElement(CardElement);
+    const cardElement: any = elements.getElement(CardElement);
 
     await stripe
       .confirmCardPayment(paymentInfo.clientSecret, {
@@ -311,7 +310,7 @@ const StripeForm = () => {
       })
       .then(({ error, paymentIntent }) => {
         if (error) {
-          setMessage(error.message);
+          setMessage((error.message as string));
           return;
         }
         console.log('paymentResult', paymentIntent);
@@ -348,7 +347,7 @@ const Finished = () => {
   const [refundIsLoading, setRefundLoading] = useState(false);
   const { paymentInfo, updatePaymentInfo } = useSharedState();
 
-  const handleRefund = async (e) => {
+  const handleRefund = async (e: any) => {
     e.preventDefault();
     if (!paymentInfo) {
       return;

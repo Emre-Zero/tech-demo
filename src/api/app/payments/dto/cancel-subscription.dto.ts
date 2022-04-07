@@ -1,3 +1,3 @@
 export default class CancelSubscriptionDto {
-  subscriptionId: string;
+  subscriptionId: string | undefined;
 }

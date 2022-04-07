@@ -1,8 +1,9 @@
 import React from 'react';
-import '@client/styles.css';
+import '@client/css/styles.css';
 
 // eslint-disable-next-line react/prop-types
-function MyApp({ Component, pageProps }) {
+function MyApp(props: { Component: any, pageProps: any }) {
+  const {Component, pageProps} = props;
   // eslint-disable-next-line react/jsx-props-no-spreading
   return <Component {...pageProps} />;
 }

@@ -1,5 +1,5 @@
 export default class CreateSubscriptionDto {
-  state: string;
-  discountCode: string;
-  plan: string;
+  state: string | undefined;
+  discountCode: string | undefined;
+  plan: string | undefined;
 }

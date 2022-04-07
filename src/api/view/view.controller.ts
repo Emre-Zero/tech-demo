@@ -10,7 +10,7 @@ export default class ViewController {
 
   async handler(req: Request, res: Response) {
     const parsedUrl = parse(req.url, true);
-    await this.viewService.getNextServer().render(req, res, parsedUrl.pathname, parsedUrl.query);
+    await this.viewService.getNextServer().render(req, res, <string>parsedUrl.pathname, parsedUrl.query);
   }
 
   @Get('/')
@@ -25,6 +25,6 @@ export default class ViewController {
   @Get('_next*')
   public async assets(@Req() req: Request, @Res() res: Response) {
     const parsedUrl = parse(req.url, true);
-    await this.viewService.getNextServer().render(req, res, parsedUrl.pathname, parsedUrl.query);
+    await this.viewService.getNextServer().render(req, res, <string>parsedUrl.pathname, parsedUrl.query);
   }
 }
