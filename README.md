@@ -22,11 +22,11 @@
 - Started with [this template](https://github.com/thisismydesign/nestjs-starter).
 
 ### What can be improved
-- State input should be a dropdown, but NextUI doesn't support dropdowns yet
-- Hardening validation for API endpoints
+- Harden validation for API endpoints
 - Display total subscription amount with tax included in frontend
 - Adding user authentication, database integration
 - Add tests with Jest
+- State input should be a dropdown, but NextUI doesn't support dropdowns yet
 
 ---
 
