@@ -14,9 +14,9 @@ import StripeService from '@app/payments/stripe.service';
     }),
     StripeModule.forRootAsync(StripeModule, {
       useFactory: async (configService: ConfigService): Promise<StripeModuleConfig> => {
-          return {
-            apiKey: <string>configService.get('STRIPE_SECRET_KEY'),
-          }
+        return {
+          apiKey: <string>configService.get('STRIPE_SECRET_KEY'),
+        };
       },
       inject: [ConfigService],
     }),

@@ -1,11 +1,20 @@
+import Head from 'next/head';
 import React from 'react';
-import '@client/css/styles.css';
+import { Provider } from 'react-redux';
+import store from '@client/app/store';
+import '@client/styles.css';
 
-// eslint-disable-next-line react/prop-types
-function MyApp(props: { Component: any, pageProps: any }) {
-  const {Component, pageProps} = props;
-  // eslint-disable-next-line react/jsx-props-no-spreading
-  return <Component {...pageProps} />;
+function MyApp(props: { Component: any; pageProps: any }) {
+  const { Component, pageProps } = props;
+  return (
+    <Provider store={store}>
+      <Head>
+        <title>Stripe Demo</title>
+      </Head>
+      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+      <Component { ...pageProps } />
+    </Provider>
+  );
 }
 
 // Only uncomment this method if you have blocking data requirements for

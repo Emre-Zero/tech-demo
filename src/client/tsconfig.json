@@ -4,9 +4,13 @@
     "paths": {
       "@client/*": [
         "./*"
+      ],
+      "@shared/*": [
+        "../../src/shared/*"
       ]
     },
-    "target": "es2015", // https://www.typescriptlang.org/tsconfig#target
+    // https://www.typescriptlang.org/tsconfig#target
+    "target": "es2015",
     "lib": [
       "dom",
       "dom.iterable",

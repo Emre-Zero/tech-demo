@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { InjectStripeClient } from '@golevelup/nestjs-stripe';
 import Stripe from 'stripe';
-import CancelSubscriptionDto from "@app/payments/dto/cancel-subscription.dto";
-import CreateSubscriptionDto from "@app/payments/dto/create-subscription.dto";
+import CancelSubscriptionDto from '@app/payments/dto/cancel-subscription.dto';
+import CreateSubscriptionDto from '@app/payments/dto/create-subscription.dto';
 
 // Hard-coded to make things simple
 const customerId = 'cus_LNf3c2Z5iH782C';
@@ -46,7 +46,8 @@ export default class StripeService {
     // TODO: add logger
     // console.log(subscription);
 
-    const paymentIntent = (<Stripe.Invoice>subscription.latest_invoice).payment_intent as Stripe.PaymentIntent;
+    const paymentIntent = (<Stripe.Invoice>subscription.latest_invoice)
+      .payment_intent as Stripe.PaymentIntent;
 
     return {
       subscriptionId: subscription.id,

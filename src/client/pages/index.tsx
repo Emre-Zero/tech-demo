@@ -1,6 +1,6 @@
 import React from 'react';
 import { createTheme, NextUIProvider } from '@nextui-org/react';
-import Checkout from '@client/pages/checkout';
+import Checkout from '@client/features/payment/Checkout';
 
 const theme = createTheme({
   type: 'light',

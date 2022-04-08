@@ -1,6 +1,6 @@
 import React from 'react';
-import Document, { Html, Head, Main, NextScript, DocumentContext} from 'next/document';
-import {CssBaseline} from '@nextui-org/react';
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
+import { CssBaseline } from '@nextui-org/react';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -17,7 +17,6 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           {CssBaseline.flush()}
-          <title>Stripe Demo</title>
         </Head>
         <body>
           <Main />
