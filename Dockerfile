@@ -5,4 +5,4 @@ WORKDIR /app
 ENV USER=node
 USER node
 
-ENTRYPOINT ["./scripts/web-docker-entrypoint.sh"]
+ENTRYPOINT ["./web-docker-entrypoint.sh"]
