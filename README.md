@@ -14,19 +14,22 @@
 
 ### Tech notes
 
-- [Ne<ins>s</ins>tJS](https://nestjs.com) for backend/API framework
-- [Ne<ins>x</ins>tJS](https://nextjs.org) for frontend React framework
+- [Ne<ins>s</ins>tJS](https://nestjs.com) as backend NodeJS framework
+- [Ne<ins>x</ins>tJS](https://nextjs.org) as frontend React framework
+- [React](https://reactjs.org)
+- [Redux](https://redux.js.org) + [Redux Toolkit](https://redux-toolkit.js.org) for state management
 - [Typescript](https://www.typescriptlang.org)
-- [NextUI](https://nextui.org)
+- [NextUI](https://nextui.org) for UI components
 - [React Hook Form](https://react-hook-form.com) + [Yup](https://github.com/jquense/yup) for form validation
 - Started with [this template](https://github.com/thisismydesign/nestjs-starter).
 
 ### What can be improved
 - Harden validation for API endpoints
 - Display total subscription amount with tax included in frontend
-- Adding user authentication, database integration
+- Add user authentication, database integration
 - Add tests with Jest
-- State input should be a dropdown, but NextUI doesn't support dropdowns yet
+- Improve overall frontend UX/UI
+- State input should be a dropdown (not supported yet by NextUI)
 
 ---
 
