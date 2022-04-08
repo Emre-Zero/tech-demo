@@ -26,10 +26,7 @@
 - Hardening validation for API endpoints
 - Display total subscription amount with tax included in frontend
 - Adding user authentication, database integration
-- Can extract components inside checkout.tsx
-- Add more comments to code
-- Add tests for Jest
-- Upgrade packages to latest versions
+- Add tests with Jest
 
 ---
 
