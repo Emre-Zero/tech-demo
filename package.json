@@ -1,8 +1,8 @@
 {
-  "name": "stripe-subscription-demo",
+  "name": "tech-demo",
   "private": true,
   "version": "1.0.0",
-  "description": "Stripe subscription demo",
+  "description": "Tech demo",
   "license": "MIT",
   "engines": {
     "node": "14.x"

@@ -1,4 +1,4 @@
-## Live demo site: [stripe.emre.earth](https://stripe.emre.earth)
+## Live demo site: [demo.emre.earth](https://demo.emre.earth)
 
 ---
 
