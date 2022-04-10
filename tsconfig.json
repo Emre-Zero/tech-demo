@@ -38,6 +38,6 @@
     "src/shared",
     "test",
     "ormconfig.ts",
-    ".config/jest.config.ts"
+    "jest.config.ts"
   ],
 }

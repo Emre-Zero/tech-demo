@@ -11,9 +11,6 @@ const config: Config.InitialOptions = {
   coveragePathIgnorePatterns: ['src/api/console'],
   coverageDirectory: 'coverage',
   testEnvironment: 'node',
-  roots: [
-    "../",
-  ],
 };
 
 export default config;
