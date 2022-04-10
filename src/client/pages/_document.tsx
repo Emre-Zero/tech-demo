@@ -7,7 +7,6 @@ class MyDocument extends Document {
     const initialProps = await Document.getInitialProps(ctx);
     return {
       ...initialProps,
-      // eslint-disable-next-line react/jsx-no-useless-fragment
       styles: <>{initialProps.styles}</>,
     };
   }

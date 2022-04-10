@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  web:
+    container_name: tech-demo
+    build:
+      context: ../.
+      dockerfile: ./.docker/${DOCKER_FILE:-Dockerfile}
+    command: yarn start:dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ../.:/app

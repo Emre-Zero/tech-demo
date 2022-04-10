@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package.json yarn.lock ./
 RUN yarn install --immutable --immutable-cache --check-cache
 
-COPY . /app
+COPY ../. /app
 
 ARG NEXT_PUBLIC_STRIPE_KEY
 ENV NEXT_PUBLIC_STRIPE_KEY=${NEXT_PUBLIC_STRIPE_KEY}
