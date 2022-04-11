@@ -32,7 +32,7 @@
     "@nestjs/config": "^2.0.0",
     "@nestjs/core": "^8.4.4",
     "@nestjs/platform-express": "^8.4.4",
-    "@nextui-org/react": "^1.0.2-beta.4",
+    "@nextui-org/react": "^1.0.8-beta.5",
     "@reduxjs/toolkit": "^1.8.1",
     "@stripe/react-stripe-js": "^1.7.0",
     "@stripe/stripe-js": "^1.25.0",

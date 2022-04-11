@@ -15,7 +15,6 @@ const DynamicReactJson = dynamic(import('react-json-view'), { ssr: false });
 const Checkout: NextPage = () => {
   const paymentInfo = useAppSelector(getPaymentInfo);
 
-  // @ts-ignore
   return (
     <Grid.Container gap={2} justify="center" css={{ my: '30px' }}>
       <Card css={{ mw: '400px' }}>
@@ -33,7 +32,6 @@ const Checkout: NextPage = () => {
           {paymentInfo.status === 'billing-info' && <InitialForm />}
 
           {paymentInfo.status === 'need-payment' && (
-            /* @ts-ignore */
             <Elements stripe={getStripe()}>
               <StripeForm />
             </Elements>
