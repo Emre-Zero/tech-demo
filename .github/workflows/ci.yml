@@ -2,8 +2,12 @@ name: CI
 
 on: [push, pull_request]
 
+defaults:
+  run:
+    working-directory: .docker
+
 env:
-  node_version: "14.x"
+  node_version: "16.x"
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
   DOCKER_FILE: "Dockerfile.github"
