@@ -31,6 +31,7 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+    '@typescript-eslint/ban-ts-comment': 'off',
     'no-useless-constructor': 'off',
     'no-empty-function': ['error', { allow: ['constructors'] }],
     'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
