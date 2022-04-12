@@ -12,13 +12,14 @@
 
 ---
 
-### Tech notes
+### Tech stack
 
 - [Ne<ins>s</ins>tJS](https://nestjs.com) as backend NodeJS framework
 - [Ne<ins>x</ins>tJS](https://nextjs.org) as frontend React framework
 - [React](https://reactjs.org)
 - [Redux](https://redux.js.org) + [Redux Toolkit](https://redux-toolkit.js.org) for state management
 - [Typescript](https://www.typescriptlang.org)
+- [TailwindCSS](https://tailwindcss.com/)
 - [NextUI](https://nextui.org) for UI components
 - [React Hook Form](https://react-hook-form.com) + [Yup](https://github.com/jquense/yup) for form validation
 - Started with [this template](https://github.com/thisismydesign/nestjs-starter).
