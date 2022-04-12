@@ -36,9 +36,10 @@
 To build locally:
 
 ```sh
-cp .env.example .env
 # update values in .env
-docker-compose up
+cp .env.example .env
+# start app with docker
+make go
 ```
 
 http://localhost:3000

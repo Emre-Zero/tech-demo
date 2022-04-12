@@ -16,11 +16,11 @@ const Checkout: NextPage = () => {
   const paymentInfo = useAppSelector(getPaymentInfo);
 
   return (
-    <Grid.Container gap={2} justify="center" css={{ my: '30px' }}>
-      <Card css={{ mw: '400px' }}>
+    <Grid.Container gap={2} className="justify-center my-3">
+      <Card className="max-w-sm">
         <Card.Header>
           <Link href="/">
-            <Text b h3 css={{ textGradient: '180deg, $purple300 50%, $purple500 -20%' }}>
+            <Text h3 className="font-bold" css={{ textGradient: '$gradient' }}>
               Stripe Demo
             </Text>
           </Link>
@@ -28,7 +28,7 @@ const Checkout: NextPage = () => {
 
         <Divider />
 
-        <Card.Body css={{ pt: '$10' }}>
+        <Card.Body className="pt-3">
           {paymentInfo.status === 'billing-info' && <InitialForm />}
 
           {paymentInfo.status === 'need-payment' && (
@@ -43,7 +43,7 @@ const Checkout: NextPage = () => {
 
       {paymentInfo.displayApiData && (
         <Row>
-          <Card css={{ fontSize: '13px', my: '30px' }}>
+          <Card className="my-6 text-xs">
             <Card.Header>
               <Text b>API data</Text>
             </Card.Header>

@@ -32,11 +32,11 @@ const Finished = () => {
   };
 
   return (
-    <Grid.Container justify="center" gap={1} css={{ mt: '30px' }}>
+    <Grid.Container gap={1} className="justify-center mt-5">
       {paymentInfo.status === 'finished' && (
         <div>
           <Grid>
-            <Text h3 css={{ fontWeight: '$bold', color: '$purple500' }}>
+            <Text h3 color="$purple500" className="font-bold">
               Subscribed successfully!
             </Text>
           </Grid>
@@ -54,7 +54,7 @@ const Finished = () => {
 
       {paymentInfo.status === 'refunded' && (
         <Grid>
-          <Text css={{ fontWeight: '$bold', color: '$purple500' }}>
+          <Text color="$purple500" className="font-bold">
             Cancelled subscription and refunded invoice.
           </Text>
         </Grid>

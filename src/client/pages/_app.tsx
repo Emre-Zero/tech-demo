@@ -1,9 +1,9 @@
-import Head from 'next/head';
 import React from 'react';
 import { Provider as ReduxProvider } from 'react-redux';
 import store from '@client/app/store';
-import '@client/styles.css';
+import '@client/global.css';
 import { SSRProvider as AriaProvider } from '@react-aria/ssr';
+import Head from 'next/head';
 
 function MyApp(props: { Component: any; pageProps: any }) {
   const { Component, pageProps } = props;

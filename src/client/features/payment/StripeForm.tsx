@@ -84,17 +84,17 @@ const StripeForm = () => {
   return (
     <div>
       <Grid>
-        <Text small color="$purple400" weight="bold">
+        <Text color="$purple400" className="text-sm font-bold">
           Enter card information to finalize
         </Text>
       </Grid>
       <form id="stripe-demo-form" onSubmit={handleSubmit}>
         <CardElement options={options} />
       </form>
-      <Text css={{ my: '20px' }} color="error">
+      <Text className="my-3" color="error">
         {messages}
       </Text>
-      <Row justify="space-around" css={{ mt: '20px' }}>
+      <Row justify="space-around" className="my-5">
         <Button disabled={isLoading} size="md" form="stripe-demo-form">
           {isLoading ? <Loading type="points" color="primary" size="sm" /> : 'Subscribe'}
         </Button>

@@ -1,15 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Button,
-  Divider,
-  Grid,
-  Input,
-  Loading,
-  Radio,
-  Row,
-  Text,
-  Spacer,
-} from '@nextui-org/react';
+import { Button, Divider, Grid, Input, Loading, Radio, Row, Text, Spacer } from '@nextui-org/react';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -69,10 +59,10 @@ const InitialForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <Text small weight="bold" color="$purple400">
+      <Text color="$purple400" className="text-sm font-bold">
         Enter billing address
       </Text>
-      <Grid.Container gap={1} css={{ mt: '5px' }}>
+      <Grid.Container gap={1} className="mt-1">
         <Grid>
           <Input
             bordered
@@ -130,8 +120,8 @@ const InitialForm = () => {
         </Grid>
       </Grid.Container>
 
-      <Divider css={{ mt: '20px', mb: '15px' }} />
-      <Text small color="$purple400" weight="bold">
+      <Divider className="my-4" />
+      <Text color="$purple400" className="text-sm font-bold">
         Choose a plan
       </Text>
 
@@ -146,7 +136,7 @@ const InitialForm = () => {
         </Radio>
       </Radio.Group>
 
-      <Divider css={{ mt: '20px', mb: '10px' }} />
+      <Divider className="mt-4 mb-2" />
       <Grid.Container gap={1}>
         <Grid>
           <Input
@@ -159,7 +149,7 @@ const InitialForm = () => {
         </Grid>
       </Grid.Container>
 
-      <Divider css={{ mt: '10px', mb: '20px' }} />
+      <Divider className="mt-2 mb-4" />
 
       <Row justify="space-around">
         <Button disabled={isLoading} size="md">
